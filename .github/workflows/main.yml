@@ -38,9 +38,12 @@ jobs:
 
             - run: |
                   cd dist
+
                   git init
                   git config user.name "GitHub Actions"
                   git config user.email "<>"
                   git add --all
                   git commit --message 'deploy'
-                  git push --force git@github.com:martindzejky/tekwoo.sk.git master:gh-pages
+
+                  REPO="https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git"
+                  git push --force $REPO master:gh-pages
