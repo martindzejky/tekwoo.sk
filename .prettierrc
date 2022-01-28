@@ -1,0 +1,16 @@
+{
+    "singleQuote": true,
+    "tabWidth": 4,
+    "printWidth": 100,
+    "trailingComma": "all",
+    "endOfLine": "lf",
+    "proseWrap": "always",
+    "overrides": [
+        {
+            "files": ["package.json"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}
