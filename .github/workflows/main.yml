@@ -39,6 +39,8 @@ jobs:
             - run: |
                   cd dist
                   git init
+                  git config user.name "GitHub Actions"
+                  git config user.email "<>"
                   git add --all
                   git commit --message 'deploy'
-                  git push -f git@github.com:martindzejky/tekwoo.sk.git master:gh-pages
+                  git push --force git@github.com:martindzejky/tekwoo.sk.git master:gh-pages
