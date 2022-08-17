@@ -26,6 +26,10 @@ jobs:
             - name: Copy CNAME
               run: cp CNAME dist/
 
+              # SPA support on Github Pages
+            - name: Copy index.html to 404.html
+              run: cp dist/index.html dist/404.html
+
             - uses: actions/upload-artifact@v2
               with:
                   name: dist
