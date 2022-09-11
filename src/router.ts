@@ -1,8 +1,13 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from './views/Home.vue';
 
-import HOME_IMG from '@/assets/images/home.jpg';
 import { preloadImage } from '@/preload';
+import HOME_IMG from '@/assets/images/home.jpg';
+import SEVEN_SLIDE1 from '@/assets/images/seven/1.jpg';
+import SEVEN_SLIDE2 from '@/assets/images/seven/2.jpg';
+import SEVEN_SLIDE3 from '@/assets/images/seven/3.jpg';
+import SEVEN_SLIDE4 from '@/assets/images/seven/4.jpg';
+import SEVEN_SLIDE5 from '@/assets/images/seven/5.jpg';
 
 declare module 'vue-router' {
     interface RouteMeta {
@@ -22,6 +27,9 @@ const routes: Array<RouteRecordRaw> = [
         path: '/7',
         name: 'seven',
         component: () => import(/* webpackChunkName: "seven" */ './views/Seven.vue'),
+        meta: {
+            preloadImages: [SEVEN_SLIDE1, SEVEN_SLIDE2, SEVEN_SLIDE3, SEVEN_SLIDE4, SEVEN_SLIDE5],
+        },
     },
 ];
 

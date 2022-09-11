@@ -3,7 +3,7 @@
         <Transition
             appear
             appear-active-class="transition delay-500 duration-1000 ease-out"
-            appear-from-class="opacity-0 -translate-y-2"
+            appear-from-class="opacity-0"
         >
             <div class="w-screen h-screen relative">
                 <Transition
