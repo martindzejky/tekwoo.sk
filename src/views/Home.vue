@@ -1,18 +1,16 @@
 <template>
-    <div class="bg-black">
-        <Transition
-            appear
-            appear-active-class="transition duration-1000 ease-out"
-            appear-from-class="opacity-0"
-        >
-            <div
-                class="w-screen h-screen shadow-vignette brightness-110 bg-center bg-cover"
-                :style="{ backgroundImage: `url(${IMG})` }"
-            ></div>
-        </Transition>
-    </div>
+    <Transition
+        enter-active-class="transition duration-1000 ease-out"
+        enter-from-class="opacity-0"
+        leave-active-class="transition duration-1000 ease-in"
+        leave-to-class="opacity-0"
+    >
+        <Suspense>
+            <HomeImage />
+        </Suspense>
+    </Transition>
 </template>
 
 <script setup lang="ts">
-import IMG from '@/assets/images/home.jpg';
+import HomeImage from '@/views/HomeImage.vue';
 </script>
