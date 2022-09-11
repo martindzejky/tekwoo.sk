@@ -1,16 +1,27 @@
 <template>
-    <div class="w-screen h-screen relative">
+    <div class="bg-black">
         <Transition
-            enter-active-class="transition duration-500"
-            enter-from-class="opacity-0"
-            enter-to-class="opacity-100"
-            leave-active-class="transition duration-500"
-            leave-from-class="opacity-100"
-            leave-to-class="opacity-0"
+            appear
+            appear-active-class="transition delay-500 duration-1000 ease-out"
+            appear-from-class="opacity-0 -translate-y-2"
         >
-            <SevenImage v-if="counter === 0" :url="IMG1" />
-            <SevenImage v-else-if="counter === 1" :url="IMG2" />
-            <SevenImage v-else-if="counter === 2" :url="IMG3" />
+            <div class="w-screen h-screen relative">
+                <Transition
+                    mode="in-out"
+                    enter-active-class="transition duration-[1s]"
+                    enter-from-class="opacity-0"
+                    enter-to-class="opacity-100"
+                    leave-active-class="transition duration-[1s]"
+                    leave-from-class="opacity-100"
+                    leave-to-class="opacity-0"
+                >
+                    <SevenImage v-if="counter === 0" :url="IMG1" />
+                    <SevenImage v-else-if="counter === 1" :url="IMG2" />
+                    <SevenImage v-else-if="counter === 2" :url="IMG3" />
+                    <SevenImage v-else-if="counter === 3" :url="IMG4" />
+                    <SevenImage v-else-if="counter === 4" :url="IMG5" />
+                </Transition>
+            </div>
         </Transition>
     </div>
 </template>
@@ -22,10 +33,12 @@ import { watch } from 'vue';
 import IMG1 from '../assets/images/seven/1.jpg';
 import IMG2 from '../assets/images/seven/2.jpg';
 import IMG3 from '../assets/images/seven/3.jpg';
+import IMG4 from '../assets/images/seven/4.jpg';
+import IMG5 from '../assets/images/seven/5.jpg';
 import SevenImage from '@/components/SevenImage.vue';
 
-const { counter, pause } = useInterval(3000, { controls: true });
+const { counter, pause } = useInterval(2000, { controls: true });
 watch(counter, (counter) => {
-    if (counter >= 2) pause();
+    if (counter >= 4) pause();
 });
 </script>
