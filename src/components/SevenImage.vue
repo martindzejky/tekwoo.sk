@@ -6,6 +6,8 @@
 </template>
 
 <script setup lang="ts">
-// eslint-disable-next-line no-undef
-defineProps<{ url: string }>();
+import { preloadImage } from '@/preload';
+
+const props = defineProps<{ url: string }>();
+await preloadImage(props.url);
 </script>

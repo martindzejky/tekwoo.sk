@@ -1,27 +1,23 @@
 <template>
-    <Transition
-        appear
-        appear-active-class="transition delay-500 duration-1000 ease-out"
-        appear-from-class="opacity-0"
-    >
-        <div class="w-screen h-screen relative">
-            <Transition
-                mode="in-out"
-                enter-active-class="transition duration-[1s]"
-                enter-from-class="opacity-0"
-                enter-to-class="opacity-100"
-                leave-active-class="transition duration-[1s]"
-                leave-from-class="opacity-100"
-                leave-to-class="opacity-0"
-            >
+    <div class="w-screen h-screen relative">
+        <Transition
+            mode="in-out"
+            enter-active-class="transition duration-[1s]"
+            enter-from-class="opacity-0"
+            enter-to-class="opacity-100"
+            leave-active-class="transition duration-[1s]"
+            leave-from-class="opacity-100"
+            leave-to-class="opacity-0"
+        >
+            <Suspense>
                 <SevenImage v-if="counter === 0" :url="IMG1" />
                 <SevenImage v-else-if="counter === 1" :url="IMG2" />
                 <SevenImage v-else-if="counter === 2" :url="IMG3" />
                 <SevenImage v-else-if="counter === 3" :url="IMG4" />
                 <SevenImage v-else-if="counter === 4" :url="IMG5" />
-            </Transition>
-        </div>
-    </Transition>
+            </Suspense>
+        </Transition>
+    </div>
 </template>
 
 <script setup lang="ts">
