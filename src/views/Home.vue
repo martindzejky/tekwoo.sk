@@ -5,7 +5,7 @@
         appear-from-class="-translate-y-full"
     >
         <div
-            class="fixed font-handwritten inset-x-0 flex gap-4 items-center text-white z-10 py-4 px-10"
+            class="fixed font-handwritten inset-x-0 flex gap-4 items-end text-white z-10 py-4 px-10"
         >
             <RouterLink class="text-4xl hover:text-light transition cursor-pointer" to="/">
                 Tekwoo
@@ -14,14 +14,17 @@
             <div class="grow"></div>
 
             <a
-                class="text-lg hover:text-light transition cursor-pointer"
+                class="text-lg leading-snug hover:text-light transition cursor-pointer"
                 href="mailto:martindzejky@gmail.com"
             >
-                Contact
+                Kontakt
             </a>
 
-            <RouterLink class="text-lg hover:text-light transition cursor-pointer" to="/7">
-                Origins
+            <RouterLink
+                class="text-lg leading-snug hover:text-light transition cursor-pointer"
+                to="/7"
+            >
+                Dielňa
             </RouterLink>
         </div>
     </Transition>
