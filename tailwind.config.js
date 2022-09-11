@@ -5,8 +5,14 @@ module.exports = {
         colors: {
             black: '#000',
             dark: '#311E10',
-            light: '#E4CCC4',
             primary: '#596F62',
+            light: '#E4CCC4',
+            white: '#FFF',
+        },
+
+        fontFamily: {
+            sans: ['Open Sans', 'sans-serif'],
+            handwritten: ['Pacifico', 'cursive'],
         },
 
         boxShadow: {

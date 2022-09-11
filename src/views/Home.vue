@@ -1,4 +1,31 @@
 <template>
+    <Transition
+        appear
+        appear-active-class="transition duration-1000 ease-out delay-500"
+        appear-from-class="-translate-y-full"
+    >
+        <div
+            class="fixed font-handwritten inset-x-0 flex gap-4 items-center text-white z-10 py-4 px-10"
+        >
+            <RouterLink class="text-4xl hover:text-light transition cursor-pointer" to="/">
+                Tekwoo
+            </RouterLink>
+
+            <div class="grow"></div>
+
+            <a
+                class="text-lg hover:text-light transition cursor-pointer"
+                href="mailto:martindzejky@gmail.com"
+            >
+                Contact
+            </a>
+
+            <RouterLink class="text-lg hover:text-light transition cursor-pointer" to="/7">
+                Origins
+            </RouterLink>
+        </div>
+    </Transition>
+
     <div class="bg-black">
         <Transition
             appear
