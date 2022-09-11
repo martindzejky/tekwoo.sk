@@ -17,4 +17,8 @@ module.exports = {
         'no-console': 'error',
         'no-debugger': 'error',
     },
+    globals: {
+        defineProps: true,
+        defineEmits: true,
+    },
 };
