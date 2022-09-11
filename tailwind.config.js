@@ -8,5 +8,9 @@ module.exports = {
             light: '#E4CCC4',
             primary: '#596F62',
         },
+
+        boxShadow: {
+            vignette: 'inset 0 0 100px rgba(0, 0, 0, 0.5)',
+        },
     },
 };
