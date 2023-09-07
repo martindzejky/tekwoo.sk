@@ -1,24 +1,23 @@
-# tekwoo
+# tekwoo.sk
+
+Source code for [tekwoo.sk](https://tekwoo.sk). Simple static website made using Vue CLI.
 
 ## Project setup
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Local development
+
 ```
 npm run dev
 ```
 
-### Compiles and minifies for production
+### Production build
+
+This is run automatically in CI.
+
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
