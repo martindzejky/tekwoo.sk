@@ -30,6 +30,10 @@ import IMG3 from '@/assets/images/seven/3.jpg';
 import IMG4 from '@/assets/images/seven/4.jpg';
 import IMG5 from '@/assets/images/seven/5.jpg';
 import SevenImage from '@/components/SevenImage.vue';
+import { preloadImage } from '@/preload';
+
+// preload all images upfront
+await Promise.allSettled([IMG1, IMG2, IMG3, IMG4, IMG5].map((src) => preloadImage(src)));
 
 const { counter, pause } = useInterval(2000, { controls: true });
 watch(counter, (counter) => {
